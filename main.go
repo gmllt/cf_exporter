@@ -14,7 +14,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/prometheus/common/version"
 	log "github.com/sirupsen/logrus"
-	kingpin "gopkg.in/alecthomas/kingpin.v2"
+	"gopkg.in/alecthomas/kingpin.v2"
 )
 
 var (
@@ -194,9 +194,6 @@ func main() {
 		KeyFile:        *bbsKeyFile,
 		SkipCertVerify: *bbsSkipSSLValidation,
 	}
-
-	log.Infof("cfConfig: %+v", cfConfig)
-	log.Infof("bbsConfig: %+v", bbsConfig)
 
 	active := []string{}
 	if len(*filterCollectors) != 0 {
