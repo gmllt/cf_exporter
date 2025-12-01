@@ -15,7 +15,7 @@ builds:
       - -X github.com/prometheus/common/version.Branch={{.Branch}}
       - -X github.com/prometheus/common/version.BuildUser={{.Env.USER}}
       - -X github.com/prometheus/common/version.BuildDate={{.Date}}
-      - -X code.cloudfoundry.org/cli/version/binaryVersion={{.Version}}
+      - -X code.cloudfoundry.org/cli/v8/version/binaryVersion={{.Version}}
     goos:
       - linux
       - darwin
